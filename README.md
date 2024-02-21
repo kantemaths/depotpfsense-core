@@ -1,0 +1,2 @@
+# depotpfsense-core
+pfsense-core
