@@ -32,29 +32,7 @@ services:
           external: false
         conakry:
           external: true
-   wp:
-       image: wordpress:php8.3-apache
-       ports:
-         - 8092: 80
-       environment:
-         WORDPRESS_DB_HOST: db
-         WORDPRESS_DB_USER: wp_user
-         WORDPRESS_DB_PASSWORD: password
-         WORDPRESS_DB_NAME: wp_database
-       networks:
-         - default
-       depends_on:
-         - db
-    db:
-       image: mysql:8.3.0
-       container_name: db_wordpress
-       environment:
-         - MYSQL_ROOT_PASSWORD=password
-         - MYSQL_DATABASE=wp_database
-         - MYSQL_USER=wp_user
-         - MYSQL_PASSWORD=password
-       networks:
-         - default
+ 
 
       
          
